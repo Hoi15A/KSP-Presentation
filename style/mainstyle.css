@@ -1,0 +1,59 @@
+body {
+	/* Misc */
+	overflow: hiddeN;
+	margin: 0;
+
+	/* Bg */
+	background-image: url("../media/back.jpg");
+	background-repeat: repeat;
+
+	/* Font */
+	color: rgb(180, 180, 180);
+	font-family: sans-serif;
+}
+
+h1 { font-size: 6em; }
+h2 { font-size: 3.5em; }
+h3 { font-size: 3em; }
+h4 { font-size: 2em; }
+li { font-size: 2em; }
+
+.slide {
+	/* A slide = 100% vertical screenheight*/
+	min-height: 100vh;
+	/* Space between slides */
+	margin: 5vh 0 5vh 0;
+	background-color: rgba(0, 0, 0, .1);
+	-webkit-animation-delay: 1s;
+}
+
+.slide_exit {
+	-webkit-animation-delay: 0s;
+}
+
+.slide_content {
+	padding: 5% 0 0 25%;
+}
+
+.logo_big {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	display: block;
+}
+
+
+/* Jeb animation */
+@keyframes jeb {
+	0% { top: 50px; } 
+	50% { top: 100px; } 
+	100% { top: 50px; } 
+}
+
+#jeb {
+	width: 8%;
+	top: 5%;
+	left: 2.5%;
+	animation: jeb 5s infinite reverse ease-in-out;
+	position: fixed;
+}
