@@ -78,3 +78,24 @@ li { font-size: 2em; }
 	left: 0;
 	background-color: transparent;
 }
+
+#sidebar {
+	z-index: 1000;
+	height: 100vh;
+	width: 1.5vw;
+	position: fixed;
+	right: 0;
+	top: 0;
+	background-color: rgba(50, 50, 80, .5);
+}
+
+.sidebar_current {
+	background-color: rgba(150, 150, 180, .5);
+}
+
+.sidebar_element {
+	text-align: center;
+	font-size: 1.2vw;
+	cursor: pointer;
+}
+

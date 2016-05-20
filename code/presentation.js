@@ -7,6 +7,22 @@
 	var slides = document.querySelectorAll(".slide");
 	var slides_count = slides.length;
 	var scroll_time_ms = 1500;
+	var sidebar = document.getElementById("sidebar");
+	var slide_count = document.getElementsByClassName("slide").length;
+
+	for(var i = 0; i < slide_count; i++) {
+		var newDiv = document.createElement("div");
+		var heightPercent = 100 / slide_count;
+		newDiv.className = "sidebar_element";
+		newDiv.style = "height: " + heightPercent + "%";
+		newDiv.textContent = i + 1;
+		newDiv.onclick = function () {
+			previous = current;
+			current = this.textContent - 1;		
+			scroll();
+		}
+		sidebar.appendChild(newDiv);
+	}
 
 	window.onbeforeunload = function() {
 		window.scrollTo(0,0);
@@ -49,16 +65,14 @@
 
 	function scroll() {
 		// Slide changed
-		if(current != previous) {
-			// Animate next slide
-			slides[current].className = "slide animated zoomIn";
-			slides[previous].className = "slide slide_exit animated fadeOut";
+		// Animate next slide
+		slides[current].className = "slide animated zoomIn";
+		slides[previous].className = "slide slide_exit animated fadeOut";
 
-			// Scroll to next slide
-			$('html, body').animate({
-	    		scrollTop: slides[current].offsetTop
-	    	}, scroll_time_ms);
-		}
+		// Scroll to next slide
+		$('html, body').animate({
+    		scrollTop: slides[current].offsetTop
+    	}, scroll_time_ms);
 	}
 
 }) ();
