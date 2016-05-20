@@ -57,3 +57,23 @@ li { font-size: 2em; }
 	animation: jeb 5s infinite reverse ease-in-out;
 	position: fixed;
 }
+
+#previous {
+	z-index: 999;
+	position: fixed;
+	height: 50%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+}
+
+#next {
+	z-index: 999;
+	position: fixed;
+	height: 50%;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	background-color: transparent;
+}

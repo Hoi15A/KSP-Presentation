@@ -1,38 +1,53 @@
 (function() {
 	// DOM ready	
 
-	// Handle up down / left right keypresses
-	document.onkeydown = checkKey;
-
 	// Current slide, start at first slide, 0
 	var current = 0;
+	var previous = current;
 	var slides = document.querySelectorAll(".slide");
 	var slides_count = slides.length;
 	var scroll_time_ms = 1500;
 
-	window.onbeforeunload = function(){
+	window.onbeforeunload = function() {
 		window.scrollTo(0,0);
 	};
 
-	function checkKey(ev) {
+	// Handle clicks
+	document.getElementById("previous").onclick = scrollPrevious;
+	document.getElementById("next").onclick = scrollNext;
+
+	// Handle up down / left right keypresses
+	document.onkeydown = function(ev) {
 		ev = ev || window.event;
 		var key = ev.keyCode;
-		var previous = current;
+		previous = current;
 
 		switch(key) {
 			// Next slide with bounds check
 			case 40:
 			case 39:
-				current = current < slides_count - 1 ? current + 1 : current;
+				scrollNext();
 				break;
 
 			// Previous slide
 			case 38:
 			case 37:
-				current = current > 0 ? current - 1 : current;;
+				scrollPrevious();
 				break;
 		}
+	}
 
+	function scrollNext() {
+		current = current < slides_count - 1 ? current + 1 : current;
+		scroll();
+	}
+
+	function scrollPrevious() {
+		current = current > 0 ? current - 1 : current;;
+		scroll();
+	}
+
+	function scroll() {
 		// Slide changed
 		if(current != previous) {
 			// Animate next slide
