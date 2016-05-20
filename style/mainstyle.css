@@ -28,11 +28,12 @@ li { font-size: 2em; }
 }
 
 .slide_exit {
+	-webkit-filter: blur(1px);
 	-webkit-animation-delay: 0s;
 }
 
 .slide_content {
-	padding: 5% 0 0 25%;
+	padding: 5% 0 0 20%;
 }
 
 .logo_big {
@@ -52,7 +53,7 @@ li { font-size: 2em; }
 
 #jeb {
 	width: 8%;
-	top: 5%;
+	top: 20%;
 	left: 2.5%;
 	animation: jeb 5s infinite reverse ease-in-out;
 	position: fixed;
