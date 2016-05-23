@@ -8,7 +8,9 @@
 	var slides_count = slides.length;
 	var scroll_time_ms = 1500;
 	var sidebar = document.getElementById("sidebar");
+	var sidebar_button = document.getElementById("sidebar_button");
 	var slide_count = document.getElementsByClassName("slide").length;
+	sidebar.style.display = "none"; // Sidebar hidden on load
 
 	for(var i = 0; i < slide_count; i++) {
 		var newDiv = document.createElement("div");
@@ -51,6 +53,12 @@
 				scrollPrevious();
 				break;
 		}
+	}
+
+	sidebar_button.onclick = function() {
+		var sb_display = sidebar.style.display;
+		sidebar.style.display = sb_display == "none" ? "" : "none";
+		sidebar_button.style.right = sidebar.style.display == "none" ? "0" : "1.5vw";
 	}
 
 	function scrollNext() {

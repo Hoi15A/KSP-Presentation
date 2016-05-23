@@ -1,6 +1,6 @@
 body {
 	/* Misc */
-	overflow: hiddeN;
+	overflow: hidden;
 	margin: 0;
 
 	/* Bg */
@@ -87,10 +87,25 @@ li { font-size: 2em; }
 	right: 0;
 	top: 0;
 	background-color: rgba(50, 50, 80, .5);
+	opacity: .35;
 }
 
-.sidebar_current {
-	background-color: rgba(150, 150, 180, .5);
+#sidebar:hover {
+	opacity: 1;
+}
+
+#sidebar_button {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 1001;
+	background-color: rgba(50, 50, 80, .5);
+	opacity: .35;
+}
+
+#sidebar_button:hover {
+	opacity: 1;
+	cursor: pointer;
 }
 
 .sidebar_element {
@@ -99,3 +114,6 @@ li { font-size: 2em; }
 	cursor: pointer;
 }
 
+.sidebar_element:hover {
+	color: white;
+}
