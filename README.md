@@ -16,3 +16,5 @@ A web based interactive presentation about the [Kerbal Space Program](https://ke
   * Tap the bottom part of the screen
 
 Reload the page to go to the very first slide.
+
+(c) Severin, Austin 2016
