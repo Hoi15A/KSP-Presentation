@@ -33,7 +33,7 @@ li { font-size: 2em; }
 }
 
 .slide_content {
-	padding: 5% 0 0 20%;
+	padding: 1.5% 0 0 15%;
 }
 
 .logo_big {
@@ -116,4 +116,12 @@ li { font-size: 2em; }
 
 .sidebar_element:hover {
 	color: white;
+}
+
+/* For images below text */
+.image_desc {
+	max-height: 40vh;
+	float: right;
+	display: inline;
+	margin-right: 10%;
 }

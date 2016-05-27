@@ -1,5 +1,5 @@
 # KSP-Presentation
-A web based interactive presentation about the [Kerbal Space Program](https://kerbalspaceprogram.com/) game.
+A web based interactive presentation about the [Kerbal Space Program](https://kerbalspaceprogram.com/) game. This presentation was created for an English lesson at my school.
 
 ## Controls
 ### Desktop
