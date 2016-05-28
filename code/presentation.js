@@ -4,15 +4,18 @@
 	// Current slide, start at first slide, 0
 	var current = 0;
 	var previous = current;
+	var jeb = document.getElementById("jeb");
 	var slides = document.querySelectorAll(".slide");
 	var slides_count = slides.length;
-	var scroll_time_ms = 1500;
+	var scroll_time_ms = 2000;
 	var sidebar = document.getElementById("sidebar");
 	var sidebar_button = document.getElementById("sidebar_button");
 	var slide_count = document.getElementsByClassName("slide").length;
 
+
 	window.onload = function() {
 		sidebar.style.display = "none"; // Sidebar hidden on load
+		jeb.style.opacity = 0;
 		generateSidebar();
 	}
 
@@ -77,21 +80,11 @@
 
 	function scrollNext() {
 		current = current < slides_count - 1 ? current + 1 : current;
-		// Special case for first slide
-		if(current == 1) {
-			// Second slide, instructions not needed now
-			instructionsOut();
-		}
 		scroll();
 	}
 
 	function scrollPrevious() {
 		current = current > 0 ? current - 1 : current;
-		// Special case for first slide
-		if(current == 0) {
-			// Bring back instructions
-			instructionsIn();
-		}
 		scroll();
 	}
 
@@ -117,6 +110,17 @@
 
 	function scroll() {
 		if(previous != current) {
+			// Special cases
+			if(current == 0) {
+				// Bring back instructions
+				instructionsIn();
+			} else {
+				// Second slide, instructions not needed now
+				instructionsOut();
+			}
+			if(current >= 2) {
+				jeb.style.opacity = 1;
+			}
 			// Slide changed
 			// Animate next slide
 			slides[current].className = "slide animated zoomIn";
