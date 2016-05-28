@@ -60,6 +60,7 @@ li { font-size: 2em; }
 }
 
 #previous {
+	padding-top: 10%;
 	z-index: 999;
 	position: fixed;
 	height: 50%;
@@ -67,6 +68,7 @@ li { font-size: 2em; }
 	top: 0;
 	left: 0;
 	background-color: transparent;
+	opacity: .5;
 }
 
 #next {
@@ -77,6 +79,30 @@ li { font-size: 2em; }
 	top: 50%;
 	left: 0;
 	background-color: transparent;
+	opacity: .5;
+}
+
+#previous img {
+	width: 15%;
+	display: block;
+	margin: 0 auto;
+}
+
+#next img {
+	width: 15%;
+	display: block;
+	margin: 0 auto;
+	-ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+}
+
+#next p,
+#previous p {
+	text-align: center;
+	margin: 0;
+	font-size: 2em;
+
 }
 
 #sidebar {
