@@ -11,9 +11,15 @@
 	var sidebar = document.getElementById("sidebar");
 	var sidebar_button = document.getElementById("sidebar_button");
 	var slide_count = document.getElementsByClassName("slide").length;
+	var status_bar = document.getElementById("status");
+	var status_slide = document.getElementById("status_slide");
 
 
 	window.onload = function() {
+		var status_height = status_bar.offsetHeight;
+		status_slide.textContent = (current + 1) + "/" + slide_count; 
+		sidebar.style.top = status_height + "px";
+		sidebar_button.style.top = status_height + "px";
 		sidebar.style.display = "none"; // Sidebar hidden on load
 		jeb.style.opacity = 0;
 		generateSidebar();
@@ -55,11 +61,12 @@
 	}
 
 	function generateSidebar() {
+		var sidebar_total_height = sidebar.offsetHeight;
 		for(var i = 0; i < slide_count; i++) {
 			var newDiv = document.createElement("div");
 			var heightPercent = 100 / slide_count;
 			newDiv.className = "sidebar_element";
-			newDiv.style = "height: " + heightPercent + "vh";
+			newDiv.style = "height: " + heightPercent + "%";
 			newDiv.textContent = i + 1;
 			newDiv.onclick = function () {
 				var nextUp = parseInt(this.textContent) - 1;
@@ -110,6 +117,7 @@
 
 	function scroll() {
 		if(previous != current) {
+			status_slide.textContent = (current + 1) + "/" + slide_count; 
 			// Special cases
 			if(current == 0) {
 				// Bring back instructions

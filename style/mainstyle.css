@@ -151,3 +151,25 @@ li { font-size: 2em; }
 	display: inline;
 	margin-right: 10%;
 }
+
+#status {
+	top: 0;
+	left: 0;
+	width: 100vw;
+	position: fixed;
+	overflow: hidden;
+	background-color: rgba(50, 50, 80, .5);
+	padding: 3px;
+	font-size: 1.5em;
+}
+
+#status #status_authors {
+	display: table;
+	margin: 0 auto;
+}
+#status #status_slide {
+	display: table;
+	margin: 0 0;
+	float: left;
+	
+}
