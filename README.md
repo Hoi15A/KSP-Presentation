@@ -1,4 +1,4 @@
-# KSP-Presentation
+# KSP-Presentation :rocket:
 A web based interactive presentation about the [Kerbal Space Program](https://kerbalspaceprogram.com/) game. This presentation was created for an English lesson at my school.
 
 ## Controls
