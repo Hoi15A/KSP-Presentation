@@ -74,8 +74,6 @@
 			newDiv.textContent = i + 1;
 			newDiv.onclick = function () {
 				var nextUp = parseInt(this.textContent) - 1;
-				console.log(current);
-				console.log(nextUp);
 				if(nextUp > current) {
 					current = nextUp - 1;
 					scrollNext();
