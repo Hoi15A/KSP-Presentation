@@ -1,5 +1,5 @@
 (function() {
-	// DOM ready	
+	// DOM ready
 
 	// Current slide, start at first slide, 0
 	var current = 0;
@@ -14,15 +14,19 @@
 	var status_bar = document.getElementById("status");
 	var status_slide = document.getElementById("status_slide");
 
+	// Video variable
+	var VideoS13 = document.getElementById("VideoS13");
+
 
 	window.onload = function() {
 		var status_height = status_bar.offsetHeight;
-		status_slide.textContent = (current + 1) + "/" + slide_count; 
+		status_slide.textContent = (current + 1) + "/" + slide_count;
 		sidebar.style.top = status_height + "px";
 		sidebar_button.style.top = status_height + "px";
 		sidebar.style.display = "none"; // Sidebar hidden on load
 		jeb.style.opacity = 0;
 		generateSidebar();
+		VideoS13.pause();
 	}
 
 	window.onbeforeunload = function() {
@@ -79,7 +83,7 @@
 					current = nextUp + 1;
 					scrollPrevious();
 				}
-				
+
 			}
 			sidebar.appendChild(newDiv);
 		}
@@ -117,7 +121,7 @@
 
 	function scroll() {
 		if(previous != current) {
-			status_slide.textContent = (current + 1) + "/" + slide_count; 
+			status_slide.textContent = (current + 1) + "/" + slide_count;
 			// Special cases
 			if(current == 0) {
 				// Bring back instructions
@@ -139,6 +143,14 @@
     			scrollTop: slides[current].offsetTop
     		}, scroll_time_ms);
 			previous = current;
+		}
+
+		// Video Autoplay on Slide 13
+		if (current == 12) {
+			VideoS13.play();
+		}
+		else {
+			VideoS13.pause();
 		}
 	}
 
