@@ -15,7 +15,6 @@
 	var status_slide = document.getElementById("status_slide");
 
 	// Video variable
-	var VideoS13 = document.getElementById("VideoS13");
 	var videos = document.getElementsByClassName("vid");
 
 
@@ -144,18 +143,16 @@
     			scrollTop: slides[current].offsetTop
     		}, scroll_time_ms);
 			previous = current;
+			pauseAllVideos();
+			playVideosOnCurrentSlide();
 		}
+	}
 
-		pauseAllVideos();
-		videos[current].play();
-		/*
-		// Video Autoplay on Slide 13
-		if (current == 12) {
-			VideoS13.play();
+	function playVideosOnCurrentSlide() {
+ 		var currentVideos = slides[current].getElementsByTagName("video");
+		for(var i = 0; i < currentVideos.length; i++) {
+			currentVideos[i].play();
 		}
-		else {
-			VideoS13.pause();
-		}*/
 	}
 
 	function pauseAllVideos() {
