@@ -16,6 +16,7 @@
 
 	// Video variable
 	var VideoS13 = document.getElementById("VideoS13");
+	var videos = document.getElementsByClassName("vid");
 
 
 	window.onload = function() {
@@ -26,7 +27,7 @@
 		sidebar.style.display = "none"; // Sidebar hidden on load
 		jeb.style.opacity = 0;
 		generateSidebar();
-		VideoS13.pause();
+		pauseAllVideos();
 	}
 
 	window.onbeforeunload = function() {
@@ -145,12 +146,21 @@
 			previous = current;
 		}
 
+		pauseAllVideos();
+		videos[current].play();
+		/*
 		// Video Autoplay on Slide 13
 		if (current == 12) {
 			VideoS13.play();
 		}
 		else {
 			VideoS13.pause();
+		}*/
+	}
+
+	function pauseAllVideos() {
+		for(var i = 0; i < videos.length; i++) {
+			videos[i].pause();
 		}
 	}
 
