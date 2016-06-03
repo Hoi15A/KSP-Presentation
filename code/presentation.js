@@ -148,16 +148,11 @@
 		}
 	}
 
-<<<<<<< HEAD
 	function playVideosOnCurrentSlide() {
  		var currentVideos = slides[current].getElementsByTagName("video");
 		for(var i = 0; i < currentVideos.length; i++) {
 			currentVideos[i].play();
 		}
-=======
-		pauseAllVideos();
-		videos[current].play();
->>>>>>> 3955542126403107bd3221584c20d95fb53f5a8e
 	}
 
 	function pauseAllVideos() {
