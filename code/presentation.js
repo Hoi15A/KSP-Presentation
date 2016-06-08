@@ -24,7 +24,7 @@
 		sidebar.style.top = status_height + "px";
 		sidebar_button.style.top = status_height + "px";
 		sidebar.style.display = "none"; // Sidebar hidden on load
-		jeb.style.opacity = 0;
+		jeb.style.opacity = 1;
 		generateSidebar();
 		pauseAllVideos();
 	}
@@ -127,9 +127,6 @@
 			} else {
 				// Second slide, instructions not needed now
 				instructionsOut();
-			}
-			if(current >= 2) {
-				jeb.style.opacity = 1;
 			}
 			// Slide changed
 			// Animate next slide
