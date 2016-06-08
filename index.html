@@ -2,10 +2,11 @@
 <html>
 	<head>
 		<title>
-			Kerbal Interactive Presentation
+			AJAX Interactive Presentation
 		</title>
 		<link rel="stylesheet" href="style/mainstyle.css" type="text/css">
 		<link rel="stylesheet" href="style/animate.min.css" type="text/css">
+		<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 		<script src="code/jquery.min.js"></script>
 		<meta charset="UTF-8">
 	</head>
@@ -13,7 +14,7 @@
 	<body>
 		<div id="status">
 			<span id="status_slide"></span>
-			<span id="status_authors">By Severin Fürbringer and Austin Albrecht</span>
+			<span id="status_authors">By Severin Fürbringer, Austin Albrecht und Gianluca Scarciolla</span>
 		</div>
 		<div id="previous">
 			<div class="instructions">
@@ -36,10 +37,12 @@
 		<div class="slide"></div>
 
 		<div class="slide">
-			<img class="logo_big" src="media/kerbal_logo.png" alt="The official Kerbal Space Program logo.">
+			<div class="slide_content">
+				<h1 style="font-family: 'Arvo', serif !important;">AJAX</h1>
+			</div>
 		</div>
 
-		<!-- START INTRO -->
+		<!-- START PRESENTATION -->
 		<div class="slide">
 			<div class="slide_content">
 				<h1>Intro</h1>
@@ -54,362 +57,7 @@
 			</div>
 		</div>
 
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Intro</h1>
-				<h2>Protagonists</h2>
-				<ul>
-					<img class="image_desc" src="media/kerbal1.png" alt="A Kerbal astronaut.">
-					<li>Kerbals are the astronauts you fly rockets with.</li>
-					<li>Kerbals are little green Men/Women.</li>
-					<li>Their EVA-Suits have thruster-backpacks, which enable them to maneuver in space.</li>
-				</ul>
-			</div>
-		</div>
 
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Intro</h1>
-				<h2>History</h2>
-				<ul>
-					<li>Developed by SQUAD in Mexico!</li>
-					<li>Released as early access in June 2011 for Windows, Mac and Linux!</li>
-					<li>Kerbal Space Program is Squads first game.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Intro</h1>
-				<h2>Development</h2>
-				<ul>
-					<li>Kerbal Space Program was developed using the Unity Game Engine.</li>
-					<li>After more than 5 years the game is still being worked on.</li>
-				</ul>
-				<table>
-					<tr>
-						<td>
-							<img class="image_desc" src="media/early1.png" alt="An early KSP version. Source: forum.kerbalspaceprogram.com, thread '99600-the-stages-of-ksp-looking-back-on-our-favorite-game'">
-						</td>
-						<td>
-							<img class="image_desc" src="media/current1.jpg" alt="How KSP looks today!">
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Intro</h1>
-				<h2>Press</h2>
-				<ul>
-					<li></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Intro</h1>
-				<h2>Scientific community</h2>
-				<ul>
-					<li>Kerbal Space Program had multiple crossovers with the Scientific community.</li>
-					<li>NASA, Elon Musk and ESA all mentioned KSP.</li>
-				</ul>
-			</div>
-		</div>
-		<!-- END INTRO -->
-
-		<!-- START REALISM -->
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Realism</h1>
-				<h2>Real life versus KSP</h2>
-				<h3>A couple things you have to keep in mind...</h3>
-				<ul>
-					<li>Engines always start (throttle 0 to 100%).</li>
-					<li>Fuel flow is perfect and infinitely fast.</li>
-					<li>Engines are very heavy.</li>
-					<li>Ion Engines are incredibly powerful.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Realism</h1>
-				<h2>Technical limits</h2>
-				<h3>Now a couple things you dont have to worry about...</h3>
-				<ul>
-					<li>Life support.</li>
-					<li>Communication range.</li>
-					<li>Speed of light.</li>
-					<li>N-Body physics.</li>
-				</ul>
-			</div>
-		</div>
-		<!-- START REALISM -->
-
-		<!-- START HOWTOPLAY -->
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>The KSP Feedback Loop</h2>
-				<ul>
-					<li>Build rocket.</li>
-					<li>Fly rocket.</li>
-					<li>Fix Problems.</li>
-					<li>GOTO 1.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Building a rocket: Parts</h2>
-				<ul>
-					<li>Basic Parts: Pods, Fuel Tanks, Engines</li>
-					<li>Advanced Parts: Control, Structural, Aerodynamic, Utility, Science</li>
-				</ul>
-				<table>
-					<tr>
-						<td>
-							<img class="image_desc" src="media/Blueprint.png" alt="Rocket Blueprint. Source:'https://goo.gl/hPW9Dp'">
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Building a rocket: Assembly & Stages</h2>
-				<table>
-					<tr>
-						<td>
-							<img class="image_desc" src="media/Stages.png" alt="KSP Screenshot with stages.">
-						</td>
-						<td>
-							<video class="vid">
-								<source src="media/RocketAssembly.mp4" type="video/mp4"> <!-- For better playback quality when file is available offline -->
-							  <source src="https://dl.dropboxusercontent.com/u/156546101/KSP/RocketAssembly.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Building a spaceplane</h2>
-				<ul>
-					<li>In Kerbal Space Program its possible to launch planes into a stable orbit!</li>
-					<li>Ramjets are used to get to the edge of the Atmosphere. To finish the orbit, liquid fuel engines are used.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Getting into Low Earth Orbit (LEO)</h2>
-				<ul>
-					<li></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Orbital mechanics</h2>
-				<ul>
-					<li>Apoapsis</li>
-					<li>Periapsis</li>
-					<li>Velocity vector</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>How to play</h1>
-				<h2>Getting to other planets and moons</h2>
-				<ul>
-					<li>The Hohmann-Transfer</li>
-				</ul>
-			</div>
-		</div>
-		<!-- END HOWTOPLAY -->
-
-		<!-- START GAMEMODES -->
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Kerbol System</h2>
-				<ul>
-					<li>Altough smaller, the Kerbal Solar System is similar to our real-world equivalent.</li>
-					<li>The Kerbal Solar System includes a sun, a habitable planet with a moon, a gas-giant a Mars-like Planet and many more.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Moho</h2>
-				<ul>
-					<li>Closest to the Sun.</li>
-					<li>Dry, Rocky, Hot.</li>
-					<li>Solar panels work exceptionally well.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Eve</h2>
-				<ul>
-					<li>Very purple!</li>
-					<li>Heavy and toxic atmosphere!</li>
-					<li>Insane gravity levels.</li>
-					<li>Has a tiny moon. (Gilly)</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Kerbin (Earth)</h2>
-				<ul>
-					<li>The native home planet of the Kerbal race.</li>
-					<li>Similar to the real-world earth.</li>
-					<li>Two moons! (Mun and Minmus)</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Duna (Mars)</h2>
-				<ul>
-					<li>It's pretty much mars.</li>
-					<li>Thin atmosphere. Still usable for aerobraking.</li>
-					<li>Has one tiny moon (Ike).</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Dres</h2>
-				<ul>
-					<li>Surprisingly boring.</li>
-					<li>Still challenging to land on.</li>
-					<li>No moons.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Jool</h2>
-				<ul>
-					<li>Giant gas-planet.</li>
-					<li>You cannot land on a gas-planet (I learned that the hard way).</li>
-					<li>Many Interesting moons (Laythe, Vall, Tylo, Bop, Pol).</li>
-					<li>Perfect for gravity-assists.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Planets</h1>
-				<h2>Eeloo</h2>
-				<ul>
-					<li>Ice-planet.</li>
-					<li>The outer most planet.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Gamemodes</h1>
-				<h2>Sandbox Mode</h2>
-				<ul>
-					<li>No credit limits.</li>
-					<li>All parts are unlocked and ready to use from the beginning.</li>
-					<li>Perfect for building unrealistic contraptions.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Gamemodes</h1>
-				<h2>Science Mode</h2>
-				<ul>
-					<li>Similar to Sandbox Mode.</li>
-					<li>Collect Science.</li>
-					<li>Execute experiments.</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Gamemodes</h1>
-				<h2>Career Mode</h2>
-				<ul>
-					<li>Limited credits.</li>
-					<li>Collect science.</li>
-					<li>Unlock parts using science points.</li>
-				</ul>
-			</div>
-		</div>
-		<!-- END GAMEMODES -->
-
-		<!-- START MODS -->
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Mods</h1>
-				<h2></h2>
-				<ul>
-					<li>Kerbal Space Program is very customizable.</li>
-					<li>You can install mods using the CKAN mod manager.</li>
-					<li>A large majority of mods are open source!</li>
-				</ul>
-			</div>
-		</div>
-		<!-- END MODS -->
-
-		<!-- START CONCLUSION -->
-		<div class="slide">
-			<div class="slide_content">
-				<h1>Why we like the game</h1>
-				<h2></h2>
-				<ul>
-					<li>It's a very unique game.</li>
-					<li>Once you get past building silly rockets, you actaully learn a lot about actual rocket science.</li>
-					<li>Great physics simulation.</li>
-				</ul>
-			</div>
-		</div>
-		<!-- END CONCLUSION -->
 
 		<script src="code/presentation.js"></script>
 	</body>
