@@ -1,5 +1,5 @@
-# KSP-Presentation :rocket:
-A web based interactive presentation about the [Kerbal Space Program](https://kerbalspaceprogram.com/) game. This presentation was created for an English lesson at my school.
+# M133-AJAX-Presentation :rocket:
+A web based interactive presentation about [AJAX](https://en.wikipedia.org/wiki/Ajax_(programming)). This presentation was created for an IT lesson at my school.
 
 ## Controls
 ### Desktop
@@ -17,4 +17,4 @@ A web based interactive presentation about the [Kerbal Space Program](https://ke
 
 Reload the page to go to the very first slide.
 
-(c) Severin, Austin 2016
+(c) Severin, Austin, Gianluca 2016
