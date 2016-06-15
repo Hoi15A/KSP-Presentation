@@ -4,11 +4,11 @@ body {
 	margin: 0;
 
 	/* Bg */
-	background-image: url("../media/back.jpg");
+	background-image: url("../media/bg5.jpg");
 	background-repeat: repeat;
 
 	/* Font */
-	color: rgb(180, 180, 180);
+	color: rgb(61, 83, 255);
 	font-family: sans-serif;
 }
 
@@ -23,7 +23,7 @@ li { font-size: 2em; }
 	min-height: 100vh;
 	/* Space between slides */
 	margin: 5vh 0 5vh 0;
-	background-color: rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, 0);
 	-webkit-animation-delay: 1s;
 }
 
@@ -46,9 +46,9 @@ li { font-size: 2em; }
 
 /* Jeb animation */
 @keyframes jeb {
-	0% { top: 50px; } 
-	50% { top: 100px; } 
-	100% { top: 50px; } 
+	0% { top: 50px; }
+	50% { top: 100px; }
+	100% { top: 50px; }
 }
 
 #jeb {
@@ -171,7 +171,7 @@ li { font-size: 2em; }
 	display: table;
 	margin: 0 0;
 	float: left;
-	
+
 }
 
 .vid {
