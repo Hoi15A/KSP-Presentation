@@ -4,8 +4,9 @@ body {
 	margin: 0;
 
 	/* Bg */
-	background-image: url("../media/bg5.jpg");
+	background-image: url("../media/bg.jpg");
 	background-repeat: repeat;
+	background-attachment: fixed;
 
 	/* Font */
 	color: rgb(61, 83, 255);
