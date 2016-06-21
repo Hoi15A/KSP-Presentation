@@ -9,7 +9,7 @@ body {
 	background-attachment: fixed;
 
 	/* Font */
-	color: rgb(61, 83, 255);
+	color: rgb(61, 83, 225);
 	font-family: sans-serif;
 }
 
@@ -160,6 +160,7 @@ li { font-size: 2em; }
 	position: fixed;
 	overflow: hidden;
 	background-color: rgba(50, 50, 80, .5);
+	color: rgba(220, 220, 220, .8);
 	padding: 3px;
 	font-size: 1.5em;
 }
