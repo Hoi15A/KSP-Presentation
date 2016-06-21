@@ -64,7 +64,7 @@
 				<h1>index.php</h1>
 				<ul>
 					<li>Enthält alle Input felder und buttons</li>
-					<li>Enthält scripts wie das autocomplete.js</li>
+					<li>Führt Scripts wie <code>autocomplete.js</code> aus</li>
 				</ul>
 			</div>
 		</div>
@@ -73,9 +73,10 @@
 			<div class="slide_content">
 				<h1>autocomplete.js</h1>
 				<ul>
+					<li>AJAX wird in dieser Datei verwendet</li>
 					<li>Vergleicht Eingabe im Wohnort Feld mit der Datenbank</li>
 					<li>Gibt, falls Ähnlichkeiten gefunden werden, Ergebnisse aus</li>
-					<li>Ruft insert_name.php per AJAX auf</li>
+					<li>Ruft <code>insert_name.php</code> per AJAX auf</li>
 				</ul>
 			</div>
 		</div>
@@ -84,7 +85,8 @@
 			<div class="slide_content">
 				<h1>insert_name.php</h1>
 				<ul>
-					<li>Schreibt und Liest Daten in die Datenbank</li>
+					<li>Fügt, falls nicht vorhanden, einen neuen, vom Benützer eingegebenen Ort in die Datenbank ein</li>
+					<li>Ausserdem werden neue Datensätze in der <code>person</code> Tabelle eingefügt</li>
 				</ul>
 			</div>
 		</div>
@@ -93,16 +95,20 @@
 			<div class="slide_content">
 				<h1>query_ort.php</h1>
 				<ul>
-					<li>Gibt autocomplete vorschläge aus</li>
+					<li>Gibt autocomplete vorschläge von möglichen Orten aus.</li>
+					<li>Wird von <code>autocomplete.js</code> per AJAX aufgerufen.</li>
+					<li>Der Ort wird unabhängig von der Gross-/kleinschreibung verglichen</li>
+					<li>Falls ein passender Ort gefunden wurde, wird ein Link erstellt. Sobald man auf den clickt, füllt sich das Eingabefeld automatisch.</li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="slide">
 			<div class="slide_content">
-				<h1>m113_ajax.sql</h1>
+				<h1>m133_ajax.sql</h1>
 				<ul>
-					<li>Hat einstellungen der Datenbank gespeicert damit man sie einfach importieren kann</li>
+					<li>Enthält Tabellen: <code>ort, person</code></li>
+					<li>Wird für diese Applikation benötigt</li>
 					<li>Enthält 40 Ortschaften zum vergleichen</li>
 				</ul>
 			</div>
@@ -112,7 +118,7 @@
 			<div class="slide_content">
 				<h1>style.css (optional)</h1>
 				<ul>
-					<li>Dient nur zur verschönerung der page</li>
+					<li>Dient nur zur Verschönerung der page</li>
 				</ul>
 			</div>
 		</div>
@@ -121,13 +127,10 @@
 			<div class="slide_content">
 				<h1>killcss.js (optional)</h1>
 				<ul>
-					<li>Dient zum deaktivieren des CSS</li>
+					<li>Dient zum deaktivieren des CSS.</li>
 				</ul>
 			</div>
 		</div>
-
-
-
 		<script src="code/presentation.js"></script>
 	</body>
 </html>
